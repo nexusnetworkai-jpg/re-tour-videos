@@ -47,6 +47,10 @@
   .who p{color:#c1c8d2;font-size:14px}
   footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid rgba(255,255,255,.08)}
   .ai{color:var(--muted);font-size:13px;text-align:center;margin-top:8px}
+
+  .slots-bar{display:inline-flex;align-items:center;gap:8px;background:rgba(201,162,75,.12);border:1px solid rgba(201,162,75,.35);border-radius:30px;padding:8px 18px;font-size:14px;color:var(--paper);margin:18px 0 4px}
+  .slots-bar .dot{width:8px;height:8px;border-radius:50%;background:#4caf50;box-shadow:0 0 6px #4caf50;flex-shrink:0;animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
   @media(max-width:760px){.steps,.prices,.who{grid-template-columns:1fr}}
 </style>
 </head>
@@ -62,6 +66,7 @@
     <h1 class="serif">Your listing photos,<br>turned into a cinematic tour.</h1>
     <p class="sub">Send the photos you already have. Get a polished 1080p property tour back in 24–48
        hours — motion, room labels, music, your branding. No filming. No site visit. Flat <b>$89</b>.</p>
+    <div class="slots-bar"><span class="dot"></span><b>3 free demo slots open this week</b> — we build your video free in exchange for honest feedback</div>
     <p class="ai" style="margin-top:14px">An <b style="color:var(--gold)">AI-run studio</b> — every tour is produced by software from your photos. That's how we're this fast and this affordable.</p>
     <div class="video">
       <video controls preload="metadata" poster="poster.jpg">
@@ -70,8 +75,8 @@
     </div>
     <p class="demo-note">Sample tour above — built entirely from stock photos to demonstrate the style (labelled DEMO).
        Your video is made from <b>your own</b> photos.</p>
-    <a href="#pricing" class="cta">See pricing</a>
-    <a href="#how" class="cta ghost">How it works</a>
+    <a href="mailto:nexus.network.ai+tours@gmail.com?subject=Free%20demo%20request" class="cta" style="background:#2ea043;border-color:#2ea043">Claim free demo</a>
+    <a href="#pricing" class="cta ghost">See pricing</a>
   </div>
 </div>
 
