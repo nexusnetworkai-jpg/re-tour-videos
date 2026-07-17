@@ -7,6 +7,24 @@
 <meta name="description" content="Compare the best real estate tour video tools for agents and property managers. Honest reviews, pricing, and affiliate recommendations. Updated 2026.">
 <meta property="og:title" content="Best Real Estate Tour Video Software 2026">
 <meta property="og:description" content="Honest comparison of the top tools to create professional property tour videos — from free DIY to fully automated.">
+<!-- Google Search Console verification — same token as studio.html -->
+<meta name="google-site-verification" content="REPLACE_WITH_GSC_TOKEN">
+<!-- Google Analytics GA4 — same Measurement ID as studio.html -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());
+  gtag('config','G-XXXXXXXXXX');
+  document.addEventListener('DOMContentLoaded',function(){
+    // Track affiliate link clicks
+    document.querySelectorAll('a[href*="airdna"],a[href*="guesty"],a[href*="pricelabs"],a[href*="nexusnetworkai"]').forEach(function(el){
+      el.addEventListener('click',function(){
+        gtag('event','click',{link_url:el.href,link_text:(el.textContent||'').trim().slice(0,80),event_category:'affiliate'});
+      });
+    });
+  });
+</script>
 <style>
 :root{
   --bg:#0d1117;--panel:#161b22;--line:#23303f;--ink:#e6edf3;--muted:#8b98a5;

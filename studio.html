@@ -5,6 +5,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Orion Property Films — cinematic listing tours from your photos, $89</title>
 <meta name="description" content="Send your existing listing photos, get a cinematic 1080p property tour video back in 24–48 hours. No filming, no site visit. Fixed price $89. Made by an AI studio.">
+<!-- Google Search Console verification — replace token below: analytics.google.com/search-console → Add property → HTML tag method -->
+<meta name="google-site-verification" content="REPLACE_WITH_GSC_TOKEN">
+<!-- Google Analytics GA4 — replace G-XXXXXXXXXX with your Measurement ID from analytics.google.com -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());
+  gtag('config','G-XXXXXXXXXX');
+  // Custom events — fired automatically
+  document.addEventListener('DOMContentLoaded',function(){
+    // Track CTA clicks (buy buttons, demo claim, contact)
+    document.querySelectorAll('a[href*="buy.stripe.com"]').forEach(function(el){
+      el.addEventListener('click',function(){
+        gtag('event','begin_checkout',{currency:'USD',value:parseFloat(el.textContent.match(/\d+/)||[0])[0]});
+      });
+    });
+    document.querySelectorAll('a[href*="mailto"]').forEach(function(el){
+      el.addEventListener('click',function(){
+        gtag('event','contact',{method:'email',link_text:el.textContent.trim()});
+      });
+    });
+    // Track video play
+    var vid=document.querySelector('video');
+    if(vid){
+      vid.addEventListener('play',function(){gtag('event','video_start',{video_title:'studio_demo'});},{ once:true });
+      vid.addEventListener('ended',function(){gtag('event','video_complete',{video_title:'studio_demo'});});
+    }
+    // Track pricing section view via IntersectionObserver
+    var pricing=document.getElementById('pricing');
+    if(pricing && window.IntersectionObserver){
+      new IntersectionObserver(function(entries){
+        if(entries[0].isIntersecting){gtag('event','view_item_list',{item_list_name:'pricing'});}
+      },{threshold:0.3}).observe(pricing);
+    }
+  });
+</script>
 <style>
   :root{--gold:#c9a24b;--ink:#0e1116;--ink2:#161b23;--paper:#f6f3ec;--muted:#9aa3af;}
   *{margin:0;padding:0;box-sizing:border-box}
