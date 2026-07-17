@@ -5,43 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Orion Property Films — cinematic listing tours from your photos, $89</title>
 <meta name="description" content="Send your existing listing photos, get a cinematic 1080p property tour video back in 24–48 hours. No filming, no site visit. Fixed price $89. Made by an AI studio.">
-<!-- Google Search Console verification — replace token below: analytics.google.com/search-console → Add property → HTML tag method -->
-<meta name="google-site-verification" content="REPLACE_WITH_GSC_TOKEN">
-<!-- Google Analytics GA4 — replace G-XXXXXXXXXX with your Measurement ID from analytics.google.com -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer=window.dataLayer||[];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js',new Date());
-  gtag('config','G-XXXXXXXXXX');
-  // Custom events — fired automatically
-  document.addEventListener('DOMContentLoaded',function(){
-    // Track CTA clicks (buy buttons, demo claim, contact)
-    document.querySelectorAll('a[href*="buy.stripe.com"]').forEach(function(el){
-      el.addEventListener('click',function(){
-        gtag('event','begin_checkout',{currency:'USD',value:parseFloat(el.textContent.match(/\d+/)||[0])[0]});
-      });
-    });
-    document.querySelectorAll('a[href*="mailto"]').forEach(function(el){
-      el.addEventListener('click',function(){
-        gtag('event','contact',{method:'email',link_text:el.textContent.trim()});
-      });
-    });
-    // Track video play
-    var vid=document.querySelector('video');
-    if(vid){
-      vid.addEventListener('play',function(){gtag('event','video_start',{video_title:'studio_demo'});},{ once:true });
-      vid.addEventListener('ended',function(){gtag('event','video_complete',{video_title:'studio_demo'});});
-    }
-    // Track pricing section view via IntersectionObserver
-    var pricing=document.getElementById('pricing');
-    if(pricing && window.IntersectionObserver){
-      new IntersectionObserver(function(entries){
-        if(entries[0].isIntersecting){gtag('event','view_item_list',{item_list_name:'pricing'});}
-      },{threshold:0.3}).observe(pricing);
-    }
-  });
-</script>
 <style>
   :root{--gold:#c9a24b;--ink:#0e1116;--ink2:#161b23;--paper:#f6f3ec;--muted:#9aa3af;}
   *{margin:0;padding:0;box-sizing:border-box}
@@ -84,10 +47,6 @@
   .who p{color:#c1c8d2;font-size:14px}
   footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid rgba(255,255,255,.08)}
   .ai{color:var(--muted);font-size:13px;text-align:center;margin-top:8px}
-
-  .slots-bar{display:inline-flex;align-items:center;gap:8px;background:rgba(201,162,75,.12);border:1px solid rgba(201,162,75,.35);border-radius:30px;padding:8px 18px;font-size:14px;color:var(--paper);margin:18px 0 4px}
-  .slots-bar .dot{width:8px;height:8px;border-radius:50%;background:#4caf50;box-shadow:0 0 6px #4caf50;flex-shrink:0;animation:pulse 2s infinite}
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
   @media(max-width:760px){.steps,.prices,.who{grid-template-columns:1fr}}
 </style>
 </head>
@@ -103,7 +62,6 @@
     <h1 class="serif">Your listing photos,<br>turned into a cinematic tour.</h1>
     <p class="sub">Send the photos you already have. Get a polished 1080p property tour back in 24–48
        hours — motion, room labels, music, your branding. No filming. No site visit. Flat <b>$89</b>.</p>
-    <div class="slots-bar"><span class="dot"></span><b>3 free demo slots open this week</b> — we build your video free in exchange for honest feedback</div>
     <p class="ai" style="margin-top:14px">An <b style="color:var(--gold)">AI-run studio</b> — every tour is produced by software from your photos. That's how we're this fast and this affordable.</p>
     <div class="video">
       <video controls preload="metadata" poster="poster.jpg">
@@ -112,8 +70,8 @@
     </div>
     <p class="demo-note">Sample tour above — built entirely from stock photos to demonstrate the style (labelled DEMO).
        Your video is made from <b>your own</b> photos.</p>
-    <a href="mailto:nexus.network.ai+tours@gmail.com?subject=Free%20demo%20request" class="cta" style="background:#2ea043;border-color:#2ea043">Claim free demo</a>
-    <a href="#pricing" class="cta ghost">See pricing</a>
+    <a href="#pricing" class="cta">See pricing</a>
+    <a href="#how" class="cta ghost">How it works</a>
   </div>
 </div>
 
@@ -174,50 +132,10 @@
   </div>
 </div></section>
 
-<section id="faq"><div class="wrap" style="max-width:820px">
-  <h2 class="serif">Common questions</h2>
-  <div style="display:flex;flex-direction:column;gap:0">
-    <details style="border-bottom:1px solid rgba(255,255,255,.08);padding:18px 0;cursor:pointer">
-      <summary style="font-size:16px;font-weight:500;list-style:none;color:var(--paper)">What photo formats and sizes do you accept?</summary>
-      <p style="color:#aab2bd;font-size:14px;margin-top:10px">JPG, PNG, or HEIC — anything exported from your MLS, phone, or camera. Minimum 1 MP per photo (any modern phone is fine). Send 6–15 photos for best results via a Google Drive or Dropbox link, or just attach them to your email.</p>
-    </details>
-    <details style="border-bottom:1px solid rgba(255,255,255,.08);padding:18px 0;cursor:pointer">
-      <summary style="font-size:16px;font-weight:500;list-style:none;color:var(--paper)">Can I upload the finished video to Zillow, MLS, or YouTube?</summary>
-      <p style="color:#aab2bd;font-size:14px;margin-top:10px">Yes to all three. We deliver a standard MP4 that uploads directly to Zillow, Realtor.com, and most MLS video fields. You also get a vertical 9:16 cut optimised for Reels, TikTok, and YouTube Shorts at no extra charge.</p>
-    </details>
-    <details style="border-bottom:1px solid rgba(255,255,255,.08);padding:18px 0;cursor:pointer">
-      <summary style="font-size:16px;font-weight:500;list-style:none;color:var(--paper)">What exactly appears on my video?</summary>
-      <p style="color:#aab2bd;font-size:14px;margin-top:10px">Smooth Ken Burns pan/zoom on every photo, room labels (Exterior, Living Room, Kitchen, etc.), a title card with the property address and key stats, royalty-free background music, and a closing card with your name/logo if you want it. Tell us your preferences in the requirements form after checkout.</p>
-    </details>
-    <details style="border-bottom:1px solid rgba(255,255,255,.08);padding:18px 0;cursor:pointer">
-      <summary style="font-size:16px;font-weight:500;list-style:none;color:var(--paper)">How do I send you my photos after I pay?</summary>
-      <p style="color:#aab2bd;font-size:14px;margin-top:10px">After Stripe confirms your payment you'll land on a receipt page that shows the delivery email address. Just reply to that page's confirmation email — or email us directly at nexus.network.ai+tours@gmail.com — with a Google Drive / Dropbox link or the photos attached. We'll confirm receipt and deliver your tour within 24–48 hours.</p>
-    </details>
-    <details style="border-bottom:1px solid rgba(255,255,255,.08);padding:18px 0;cursor:pointer">
-      <summary style="font-size:16px;font-weight:500;list-style:none;color:var(--paper)">Does the 3-pack expire?</summary>
-      <p style="color:#aab2bd;font-size:14px;margin-top:10px">No expiry — use all three tours whenever you need them, on any listings. Each additional tour just takes another photo email.</p>
-    </details>
-    <details style="padding:18px 0;cursor:pointer">
-      <summary style="font-size:16px;font-weight:500;list-style:none;color:var(--paper)">Not ready to order yet?</summary>
-      <p style="color:#aab2bd;font-size:14px;margin-top:10px">Drop your email below and we'll send you a second example tour (luxury condo) plus a short walkthrough of what goes into each video. No pitch emails after that.</p>
-      <form action="https://formsubmit.co/nexus.network.ai+tours@gmail.com" method="POST" style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
-        <input type="hidden" name="_subject" value="RE Tour Videos — sample request">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="box">
-        <input type="email" name="email" required placeholder="your@email.com"
-          style="flex:1;min-width:220px;padding:12px 16px;border-radius:4px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:var(--paper);font-size:15px">
-        <button type="submit"
-          style="padding:12px 28px;background:var(--gold);color:#0e1116;font-weight:700;border:none;border-radius:4px;cursor:pointer;font-size:15px;white-space:nowrap">
-          Send me the example →
-        </button>
-      </form>
-    </details>
-  </div>
-</div></section>
-
 <footer><div class="wrap">
   <div class="brand" style="margin-bottom:10px"><span>ORION</span> · PROPERTY FILMS</div>
   <p>Cinematic listing tours, made from your own photos.</p>
+  <p style="margin-top:12px"><a href="blog/why-real-estate-tour-videos-are-essential.html" style="color:var(--gold);text-decoration:none;font-size:13px">→ Why Real Estate Tour Videos Are Essential for Your Listing Business</a></p>
   <p class="ai">Orion Property Films is an AI-run studio. Every tour is produced by software from the photos you provide — that's how we deliver in 24–48h at $89. We only use photos you own or are licensed to use. Contact &amp; orders: nexus.network.ai+tours@gmail.com</p>
 </div></footer>
 </body>
