@@ -11,6 +11,8 @@
   body{font-family:'Helvetica Neue',Arial,sans-serif;background:var(--ink);color:var(--paper);line-height:1.6}
   .serif{font-family:Didot,'Playfair Display','Hoefler Text',Georgia,serif}
   .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+  .announce{background:var(--gold);color:#0e1116;text-align:center;padding:10px 20px;font-size:14px;font-weight:600;letter-spacing:.03em}
+  .announce a{color:#0e1116;text-decoration:underline}
   header{padding:26px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.08)}
   .brand{letter-spacing:.4em;font-weight:700;font-size:15px}
   .brand span{color:var(--gold)}
@@ -24,6 +26,10 @@
   .cta{display:inline-block;background:var(--gold);color:#0e1116;font-weight:700;letter-spacing:.06em;
        padding:16px 40px;border-radius:4px;text-decoration:none;margin:26px 8px 8px;font-size:16px}
   .cta.ghost{background:transparent;color:var(--paper);border:1px solid rgba(255,255,255,.3)}
+  .trust-band{display:flex;flex-wrap:wrap;justify-content:center;gap:28px;margin:36px auto 0;padding:28px;background:var(--ink2);border:1px solid rgba(255,255,255,.06);border-radius:8px;max-width:860px}
+  .trust-item{text-align:center;min-width:110px}
+  .trust-item .t-num{font-size:28px;font-weight:700;color:var(--gold)}
+  .trust-item .t-lbl{font-size:12px;color:#9aa3af;letter-spacing:.05em;margin-top:2px}
   section{padding:56px 0;border-top:1px solid rgba(255,255,255,.08)}
   h2{font-size:clamp(26px,4vw,40px);font-weight:500;margin-bottom:26px;text-align:center}
   .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -45,12 +51,26 @@
   .who div{background:var(--ink2);border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:22px}
   .who h3{font-weight:500;font-size:18px;margin-bottom:6px}
   .who p{color:#c1c8d2;font-size:14px}
+  .faq-item{border-bottom:1px solid rgba(255,255,255,.08)}
+  .faq-item summary{cursor:pointer;font-size:17px;font-weight:500;color:var(--paper);list-style:none;display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary::after{content:"+";color:var(--gold);font-size:22px;font-weight:300;flex-shrink:0;margin-left:16px}
+  details[open] .faq-item summary::after{content:"−"}
+  .faq-ans{color:#c1c8d2;font-size:15px;padding-bottom:20px;max-width:700px;line-height:1.7}
+  .bottom-cta{text-align:center;padding:70px 0;background:linear-gradient(180deg,transparent 0%,rgba(201,162,75,.06) 100%)}
+  .bottom-cta h2{margin-bottom:14px}
+  .bottom-cta p{color:#cdd3dc;max-width:540px;margin:0 auto 28px;font-size:17px}
   footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid rgba(255,255,255,.08)}
   .ai{color:var(--muted);font-size:13px;text-align:center;margin-top:8px}
-  @media(max-width:760px){.steps,.prices,.who{grid-template-columns:1fr}}
+  @media(max-width:760px){.steps,.prices,.who{grid-template-columns:1fr}.trust-band{gap:20px}}
 </style>
 </head>
 <body>
+
+<div class="announce">
+  Launch week: first 20 orders at $89 &mdash; <a href="#pricing">claim yours before the price goes up →</a>
+</div>
+
 <div class="wrap">
   <header>
     <div class="brand"><span>ORION</span> · PROPERTY FILMS</div>
@@ -70,8 +90,16 @@
     </div>
     <p class="demo-note">Sample tour above — built entirely from stock photos to demonstrate the style (labelled DEMO).
        Your video is made from <b>your own</b> photos.</p>
-    <a href="#pricing" class="cta">See pricing</a>
+    <a href="https://buy.stripe.com/4gM9AVaUi5xccq81J56Ri04" class="cta">Get my listing tour — $89</a>
     <a href="#how" class="cta ghost">How it works</a>
+
+    <div class="trust-band">
+      <div class="trust-item"><div class="t-num">24–48h</div><div class="t-lbl">DELIVERY</div></div>
+      <div class="trust-item"><div class="t-num">1080p</div><div class="t-lbl">FULL HD OUTPUT</div></div>
+      <div class="trust-item"><div class="t-num">2 cuts</div><div class="t-lbl">16:9 + 9:16 VERTICAL</div></div>
+      <div class="trust-item"><div class="t-num">$0</div><div class="t-lbl">MUSIC LICENCE FEE</div></div>
+      <div class="trust-item"><div class="t-num">7-day</div><div class="t-lbl">FULL REFUND GUARANTEE</div></div>
+    </div>
   </div>
 </div>
 
@@ -98,7 +126,7 @@
       <ul><li>3 listing tours ($66 each)</li><li>Everything in Single</li><li>Priority 24h delivery</li><li>Use anytime, no expiry</li></ul>
       <a href="https://buy.stripe.com/fZu6oJe6u0cS75O87t6Ri05" class="cta" style="width:100%">Order — $199</a></div>
     <div class="price"><div class="amt">$59<small>/tour</small></div><p>Photographer white-label</p>
-      <ul><li>For photographers & agencies</li><li>Unbranded — resell as your own</li><li>Volume rate at 5+ tours/month</li><li>Turn photos into a video upsell</li></ul>
+      <ul><li>For photographers &amp; agencies</li><li>Unbranded — resell as your own</li><li>Volume rate at 5+ tours/month</li><li>Turn photos into a video upsell</li></ul>
       <a href="mailto:nexus.network.ai+tours@gmail.com?subject=White-label%20tours" class="cta ghost" style="width:100%">Set up white-label</a>
       <p style="font-size:12px;color:var(--muted);margin-top:8px">Volume tier — we reply within 24h to set you up.</p></div>
   </div>
@@ -111,10 +139,91 @@
   <h2 class="serif">Made for people who list property</h2>
   <div class="who">
     <div><h3>Real-estate agents</h3><p>Every listing deserves a video. Get one for $89 instead of a $400 shoot — back before your next open house.</p></div>
-    <div><h3>Airbnb & STR hosts</h3><p>A moving tour converts browsers into bookings. Lift your listing without hiring a videographer.</p></div>
+    <div><h3>Airbnb &amp; STR hosts</h3><p>A moving tour converts browsers into bookings. Lift your listing without hiring a videographer.</p></div>
     <div><h3>Property photographers</h3><p>Add a video upsell without touching an editor. White-label our tours and keep the margin.</p></div>
   </div>
 </div></section>
+
+<section id="compare"><div class="wrap" style="max-width:820px">
+  <h2 class="serif">$89 vs. hiring a videographer</h2>
+  <table style="width:100%;border-collapse:collapse;font-size:15px">
+    <thead>
+      <tr>
+        <th style="text-align:left;padding:12px 16px;color:var(--muted);font-weight:500;border-bottom:1px solid rgba(255,255,255,.12)">What you get</th>
+        <th style="padding:12px 16px;color:var(--gold);font-weight:700;border-bottom:1px solid rgba(255,255,255,.12);text-align:center">Orion — $89</th>
+        <th style="padding:12px 16px;color:var(--muted);font-weight:500;border-bottom:1px solid rgba(255,255,255,.12);text-align:center">Local videographer</th>
+      </tr>
+    </thead>
+    <tbody style="color:#c1c8d2">
+      <tr style="background:var(--ink2)">
+        <td style="padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05)">Typical cost</td>
+        <td style="padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);text-align:center;color:var(--gold);font-weight:700">$89 flat</td>
+        <td style="padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);text-align:center">$300–600+</td>
+      </tr>
+      <tr>
+        <td style="padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05)">Turnaround</td>
+        <td style="padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);text-align:center;color:var(--gold);font-weight:700">24–48 hours</td>
+        <td style="padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);text-align:center">3–7 days</td>
+      </tr>
+      <tr style="background:var(--ink2)">
+        <td style="padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05)">Site visit required</td>
+        <td style="padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);text-align:center;color:var(--gold);font-weight:700">None</td>
+        <td style="padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);text-align:center">Yes — scheduling needed</td>
+      </tr>
+      <tr>
+        <td style="padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05)">Vertical 9:16 cut included</td>
+        <td style="padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);text-align:center;color:var(--gold);font-weight:700">Yes</td>
+        <td style="padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);text-align:center">Extra charge</td>
+      </tr>
+      <tr style="background:var(--ink2)">
+        <td style="padding:12px 16px">Refund if unsatisfied</td>
+        <td style="padding:12px 16px;text-align:center;color:var(--gold);font-weight:700">7-day full refund</td>
+        <td style="padding:12px 16px;text-align:center">Rarely</td>
+      </tr>
+    </tbody>
+  </table>
+</div></section>
+
+<section id="faq"><div class="wrap" style="max-width:760px">
+  <h2 class="serif">Common questions</h2>
+
+  <details><div class="faq-item">
+    <summary>What quality do the photos need to be?</summary>
+    <div class="faq-ans">Any JPEG or PNG works — phone shots, DSLR files, or MLS exports. Minimum around 1 MP (most modern phones shoot 12 MP+). The higher the quality, the crisper the output. RAW files are not required or expected.</div>
+  </div></details>
+
+  <details><div class="faq-item">
+    <summary>Will the music get flagged on YouTube or Instagram?</summary>
+    <div class="faq-ans">No. Every tour ships with original synthesized audio we generate from scratch — no sampled tracks, no third-party licences, and no Content ID. You can post directly to YouTube, Instagram, TikTok, or any MLS without any copyright claim. If you prefer your own track, just include it with your photos and we'll use it instead.</div>
+  </div></details>
+
+  <details><div class="faq-item">
+    <summary>How do I add my name, brokerage, and logo?</summary>
+    <div class="faq-ans">After placing your order, include your name, brokerage, and a logo file (PNG with transparent background is ideal) in the email with your photos. If you skip it, we add a clean text card on the opening frame with your name only.</div>
+  </div></details>
+
+  <details><div class="faq-item">
+    <summary>What if I'm not happy with the result?</summary>
+    <div class="faq-ans">One free revision is included — email us a list of changes and we re-render. If you're still not satisfied, reply within 7 days of delivery for a full Stripe refund. No forms, no arguing.</div>
+  </div></details>
+
+  <details><div class="faq-item">
+    <summary>Can I use the video on Zillow, Realtor.com, and the MLS?</summary>
+    <div class="faq-ans">Yes. You receive a standard MP4 — the same format accepted by every major listing platform: Zillow, Realtor.com, Redfin, and virtually every MLS system. You own the video outright after delivery.</div>
+  </div></details>
+
+  <details><div class="faq-item">
+    <summary>How is this different from live video footage?</summary>
+    <div class="faq-ans">A local videographer costs $300–600 and needs a site visit, then 3–7 days of editing. We cost $89, need no site visit, and deliver in 24–48 hours. Our footage is motion-animated from your stills — a professional, cinematic slideshow tour rather than live-action walkthrough footage. For most listings (especially rentals and STR), this converts just as well at a fraction of the cost.</div>
+  </div></details>
+</div></section>
+
+<div class="bottom-cta"><div class="wrap">
+  <h2 class="serif">Ready for your next listing?</h2>
+  <p>Order now. Send your photos. Get a polished tour video in your inbox within 24–48 hours — for less than a dinner out.</p>
+  <a href="https://buy.stripe.com/4gM9AVaUi5xccq81J56Ri04" class="cta">Get my listing tour — $89</a>
+  <a href="https://buy.stripe.com/fZu6oJe6u0cS75O87t6Ri05" class="cta ghost">3-pack ($66/tour)</a>
+</div></div>
 
 <section id="terms"><div class="wrap" style="max-width:820px">
   <h2 class="serif" style="font-size:26px">The fine print</h2>
